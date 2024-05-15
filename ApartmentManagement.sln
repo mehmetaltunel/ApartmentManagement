@@ -5,8 +5,6 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentetation", "Presentetation", "{FC99CC0B-888E-49BC-8A1C-CF1682361DEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentManagement.Desktop", "Presentation\ApartmentManagement.Desktop\ApartmentManagement.Desktop.csproj", "{05F2FBC0-959A-427A-B2D8-24B9FC67EF04}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartmentManagement.Api", "Presentation\ApartmentManagement.Api\ApartmentManagement.Api.csproj", "{DD7DD0D5-4822-4DCB-8FFD-4C74437E4F71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{114E333A-5096-4140-BFE7-62E1300AA204}"
@@ -27,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05F2FBC0-959A-427A-B2D8-24B9FC67EF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05F2FBC0-959A-427A-B2D8-24B9FC67EF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05F2FBC0-959A-427A-B2D8-24B9FC67EF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05F2FBC0-959A-427A-B2D8-24B9FC67EF04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD7DD0D5-4822-4DCB-8FFD-4C74437E4F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD7DD0D5-4822-4DCB-8FFD-4C74437E4F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD7DD0D5-4822-4DCB-8FFD-4C74437E4F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -56,7 +50,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{05F2FBC0-959A-427A-B2D8-24B9FC67EF04} = {FC99CC0B-888E-49BC-8A1C-CF1682361DEE}
 		{DD7DD0D5-4822-4DCB-8FFD-4C74437E4F71} = {FC99CC0B-888E-49BC-8A1C-CF1682361DEE}
 		{46BD5EBE-BB65-40E5-89F7-8EA4B27445C2} = {114E333A-5096-4140-BFE7-62E1300AA204}
 		{3577B5D4-2396-497F-8169-03E859068B45} = {59E7D370-C1BB-4649-9403-6F47AB352CE3}

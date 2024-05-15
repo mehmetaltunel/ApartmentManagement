@@ -14,6 +14,19 @@ public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterComma
 
     public async Task<RegisterResponseModel> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
     {
+        UnitOfWork.OpenTransaction();
+/*
+        var passwordSalt = PasswordManager.GenerateSalt();
+        var passwordHash = PasswordManager.HashPassword(request.Password, passwordSalt);
+
+        var user = new Entities.Model.User
+        {
+            Username = request.Username,
+            Email = request.Email,
+            PasswordHash = passwordHash,
+            PasswordSalt = Convert.ToBase64String(passwordSalt),
+            IsConfirmed = isConfirmed
+        };*/
         throw new BusinessRuleException(new List<string>() { BusinessRuleExceptionKey.GENERAL });
     }
 }

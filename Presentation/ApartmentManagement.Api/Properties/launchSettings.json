@@ -1,16 +1,15 @@
-﻿{
+{
   "$schema": "https://json.schemastore.org/launchsettings.json",
- 
   "profiles": {
     "ApartmentManagement.Api": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5046",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true
     }
   }
 }
