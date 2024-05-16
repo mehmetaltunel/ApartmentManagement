@@ -1,5 +1,6 @@
 using System.Data;
 using System.Reflection;
+using ApartmentManagement.Core.Utils;
 using ApartmentManagement.DataAccessLayer.Abstract;
 using ApartmentManagement.DataAccessLayer.Abstract.Repositoreis;
 using Microsoft.EntityFrameworkCore;
@@ -59,10 +60,10 @@ public class UnitOfWork<TContext> : IUnitOfWork, IDisposable
             {
                 return _dbContext.SaveChangesAsync();
             }
-            catch
+            catch(Exception ex)
             {
                 _transaction?.Rollback();
-                throw;
+                throw new BusinessRuleException(new List<string>()  { BusinessRuleExceptionKey.DATABASE_ERROR, ex.Message });
             }
         }
 

@@ -18,5 +18,6 @@ public class BusinessRuleExceptionKey
     public static string ROLE_CONTAINS_USER = "ROLE_CONTAINS_USER";
     public static string GENERAL = "GENERAL";
     public static string CATEGORY_ORDER_IF_NOT_NULL_GREATER_THAN_ZERO = "CATEGORY_ORDER_IF_NOT_NULL_GREATER_THAN_ZERO";
+    public static string DATABASE_ERROR = "DATABASE_ERROR";
 
 }

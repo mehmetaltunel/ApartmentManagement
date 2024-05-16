@@ -8,5 +8,7 @@
         public bool IsActive { get; set; }
         public bool? IsDeleted { get; set; }
         public bool? IsSoftDelete { get; set; }
+        public int? CreatedById { get; set; }
+        public int? UpdatedById { get; set; }
     }
 }

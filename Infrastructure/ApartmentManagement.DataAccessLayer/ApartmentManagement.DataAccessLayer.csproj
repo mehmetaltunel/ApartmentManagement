@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApartmentManagement.Core\ApartmentManagement.Core.csproj" />
     <ProjectReference Include="..\ApartmentManagement.Entities\ApartmentManagement.Entities.csproj" />
   </ItemGroup>
 
