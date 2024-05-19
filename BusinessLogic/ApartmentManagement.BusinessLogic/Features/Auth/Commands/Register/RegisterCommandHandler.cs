@@ -9,23 +9,23 @@ using Microsoft.AspNetCore.Http;
 
 namespace ApartmentManagement.BusinessLogic.Features.Auth.Commands.Register;
 
-public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterCommandRequest,BaseResponseModel<RegisterResponseModel>>
+public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterCommandRequestModel,BaseResponseModel<RegisterResponseModel>>
 {
     public RegisterCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IHttpContextAccessor httpContextAccessor) : base(unitOfWork, mapper, httpContextAccessor)
     {
     }
 
-    public async Task<BaseResponseModel<RegisterResponseModel>> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
+    public async Task<BaseResponseModel<RegisterResponseModel>> Handle(RegisterCommandRequestModel requestModel, CancellationToken cancellationToken)
     {
         UnitOfWork.OpenTransaction();
 
         var passwordSalt = PasswordManager.GenerateSalt();
-        var passwordHash = PasswordManager.HashPassword(request.Password, passwordSalt);
+        var passwordHash = PasswordManager.HashPassword(requestModel.Password, passwordSalt);
 
         var user = new User
         {
-            Username = request.Username,
-            Email = request.Email,
+            Username = requestModel.Username,
+            Email = requestModel.Email,
             PasswordHash = passwordHash,
             PasswordSalt = Convert.ToBase64String(passwordSalt),
             IsConfirmed = true

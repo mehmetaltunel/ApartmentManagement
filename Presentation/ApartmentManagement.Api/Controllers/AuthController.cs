@@ -17,6 +17,6 @@ public class AuthController : ControllerBase
     }
     
     [HttpPost("Register")]
-    public async Task<IActionResult> RegisterAsync([FromBody] RegisterCommandRequest request)
-        => Ok(await _mediator.Send(request));
+    public async Task<IActionResult> RegisterAsync([FromBody] RegisterCommandRequestModel requestModel)
+        => Ok(await _mediator.Send(requestModel));
 }

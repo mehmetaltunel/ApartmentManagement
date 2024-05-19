@@ -3,7 +3,7 @@ using MediatR;
 
 namespace ApartmentManagement.BusinessLogic.Features.Auth.Commands.Register;
 
-public class RegisterCommandRequest : IRequest<BaseResponseModel<RegisterResponseModel>>
+public class RegisterCommandRequestModel : IRequest<BaseResponseModel<RegisterResponseModel>>
 {
     public string Username { get; set; }
     public string Password { get; set; }

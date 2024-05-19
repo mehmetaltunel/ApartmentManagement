@@ -2,7 +2,7 @@ using FluentValidation;
 
 namespace ApartmentManagement.BusinessLogic.Features.Auth.Commands.Register;
 
-public class RequestModelValidatior : AbstractValidator<RegisterCommandRequest>
+public class RequestModelValidatior : AbstractValidator<RegisterCommandRequestModel>
 {
     public RequestModelValidatior()
     {
