@@ -9,8 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd4d10b-5975-40fe-92ba-2d0ab3fff658" name="Changes" comment="">
+    <list default="true" id="9dd4d10b-5975-40fe-92ba-2d0ab3fff658" name="Changes" comment="change register request model name">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ApartmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApartmentManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterCommandRequestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterCommandRequestModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogic/ApartmentManagement.BusinessLogic/Features/Auth/Commands/Register/RegisterCommandResponseModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +39,13 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0d48ee17574841d0b259d1f4f44ecfb11fd628/54/e33d3388/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dd7bbb1eb6cb4178a82cd5136b2606b812978/d1/a9782cc8/IHttpContextAccessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfbdca1d316241cdaafce1912df643196000/01/548484a1/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f245cf881f97452cb8c1b0e94d54df4e32400/8a/661a63af/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7415982338a3ccbd2a7a4eb483af627bda727e356b86bb32c5d4f6998f9c/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5b9c140912e8295f69159adbf39ad664d070868f2c2ae42d7e7dd1d92a9d4/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mehmetaltunel/Projects/NET/ApartmentManagement/Presentation/ApartmentManagement.Api/Controllers/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -65,32 +67,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.ApartmentManagement.Api: http.executor": "Debug",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ApartmentManagement.Api: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "rider.external.source.directories": [
-      "/Users/mehmetaltunel/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/Users/mehmetaltunel/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/Users/mehmetaltunel/Library/Application Support/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/mehmetaltunel/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/mehmetaltunel/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/mehmetaltunel/Library/Application Support/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ApartmentManagement.Api: http">
     <configuration name="ApartmentManagement.Desktop" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -156,6 +158,7 @@
       <workItem from="1715786859996" duration="915000" />
       <workItem from="1715868500609" duration="8671000" />
       <workItem from="1715956049123" duration="3846000" />
+      <workItem from="1716116547958" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="infrastructure">
       <option name="closed" value="true" />
@@ -181,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715888442460</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change register request model name">
+      <option name="closed" value="true" />
+      <created>1716116634608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716116634608</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +206,7 @@
     <MESSAGE value="infrastructure" />
     <MESSAGE value="data access registration &amp; ef core implementation" />
     <MESSAGE value="register" />
-    <option name="LAST_COMMIT_MESSAGE" value="register" />
+    <MESSAGE value="change register request model name" />
+    <option name="LAST_COMMIT_MESSAGE" value="change register request model name" />
   </component>
 </project>

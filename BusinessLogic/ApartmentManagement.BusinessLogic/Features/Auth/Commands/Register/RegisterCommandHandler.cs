@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Http;
 
 namespace ApartmentManagement.BusinessLogic.Features.Auth.Commands.Register;
 
-public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterCommandRequestModel,BaseResponseModel<RegisterResponseModel>>
+public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterCommandRequestModel,BaseResponseModel<RegisterCommandResponseModel>>
 {
     public RegisterCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IHttpContextAccessor httpContextAccessor) : base(unitOfWork, mapper, httpContextAccessor)
     {
     }
 
-    public async Task<BaseResponseModel<RegisterResponseModel>> Handle(RegisterCommandRequestModel requestModel, CancellationToken cancellationToken)
+    public async Task<BaseResponseModel<RegisterCommandResponseModel>> Handle(RegisterCommandRequestModel requestModel, CancellationToken cancellationToken)
     {
         UnitOfWork.OpenTransaction();
 
@@ -35,6 +35,6 @@ public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterComma
         await UnitOfWork.SaveChangesAsync();
 
         UnitOfWork.Commit();
-        return ResponseManager.Ok(new RegisterResponseModel());
+        return ResponseManager.Ok(new RegisterCommandResponseModel());
     }
 }
