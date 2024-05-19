@@ -6,6 +6,7 @@ using ApartmentManagement.Entities.Models;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApartmentManagement.BusinessLogic.Features.Auth.Commands.Register;
 
@@ -17,8 +18,11 @@ public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterComma
 
     public async Task<BaseResponseModel<RegisterCommandResponseModel>> Handle(RegisterCommandRequestModel requestModel, CancellationToken cancellationToken)
     {
+        var userNameCheck = await UnitOfWork.Repository<IUserRepository>().Query()
+            .FirstOrDefaultAsync(x => x.Username == requestModel.Username);
+        if(userNameCheck is not null)
+            throw new BusinessRuleException(new List<string>()  { BusinessRuleExceptionKey.GENERAL, "Kullanıcı adı mevcut, farklı bir kullanıcı ile deneyiniz." });
         UnitOfWork.OpenTransaction();
-
         var passwordSalt = PasswordManager.GenerateSalt();
         var passwordHash = PasswordManager.HashPassword(requestModel.Password, passwordSalt);
 
