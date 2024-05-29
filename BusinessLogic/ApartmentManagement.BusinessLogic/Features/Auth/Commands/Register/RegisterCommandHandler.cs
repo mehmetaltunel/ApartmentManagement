@@ -21,7 +21,7 @@ public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterComma
         var userNameCheck = await UnitOfWork.Repository<IUserRepository>().Query()
             .FirstOrDefaultAsync(x => x.Username == requestModel.Username);
         if(userNameCheck is not null)
-            throw new BusinessRuleException(new List<string>()  { BusinessRuleExceptionKey.GENERAL, "Kullanıcı adı mevcut, farklı bir kullanıcı ile deneyiniz." });
+            throw new BusinessRuleException(new List<string>()  { "Kullanıcı adı mevcut, farklı bir kullanıcı ile deneyiniz." });
         UnitOfWork.OpenTransaction();
         var passwordSalt = PasswordManager.GenerateSalt();
         var passwordHash = PasswordManager.HashPassword(requestModel.Password, passwordSalt);

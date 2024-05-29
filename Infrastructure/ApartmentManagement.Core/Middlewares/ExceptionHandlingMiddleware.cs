@@ -1,5 +1,6 @@
 
 using ApartmentManagement.Core.ResponseManager;
+using ApartmentManagement.Core.Utils;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
@@ -28,29 +29,34 @@ public class ExceptionHandlingMiddleware
         {
             await HandleExceptionAsync(context, ex, 400);
         }
+        catch(BusinessRuleException ex)
+        {
+            await HandleExceptionAsync(context, ex, 400, ex.Codes);
+
+        }
         catch (Exception ex)
         {
             await HandleExceptionAsync(context, ex, 500);
         }
     }
 
-    private static Task HandleExceptionAsync(HttpContext context, Exception exception, int statusCode)
+    private static Task HandleExceptionAsync(HttpContext context, Exception exception, int statusCode, List<string> codes = null)
     {
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = statusCode;
-
+        var test = exception.Data;
         BaseResponseModel response;
 
         switch (statusCode)
         {
             case 401:
-                response = ResponseManager.ResponseManager.Unauthorized(exception.Message);
+                response = ResponseManager.ResponseManager.Unauthorized(exception.Message, codes);
                 break;
             case 400:
-                response = ResponseManager.ResponseManager.BadRequest(exception.Message);
+                response = ResponseManager.ResponseManager.BadRequest(exception.Message, codes);
                 break;
             case 500:
-                response = ResponseManager.ResponseManager.InternalServerError(exception.Message);
+                response = ResponseManager.ResponseManager.InternalServerError(exception.Message, codes);
                 break;
             default:
                 response = new BaseResponseModel
